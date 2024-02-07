@@ -2,7 +2,13 @@
 
 This will be made into a final build, but the source code is here.
 
+Gallery View:<br><br>
+
 ![alt text](https://raw.githubusercontent.com/bday336/Knot-Showcase-VR/main/gallery_image.png)
+
+Specific Knot View:<br><br>
+
+![alt text](https://raw.githubusercontent.com/bday336/Knot-Showcase-VR/main/trefoil_image.png)
 
 ___________________________________
 Make local version in Unity
@@ -17,7 +23,7 @@ ___________________________________
 Functionality / Controls
 ___________________________________
 
-Currently the gallery consists of a variety of 3D models of some common mathematical knots. This is completely extendable such that more knots can be included. Alternatively, the knots can be exchanged for different objects to suit specific needs.
+Currently the gallery consists of a variety of 3D models of some common mathematical knots. This is completely extendable such that more knots can be included. Alternatively, the knots can be exchanged for different objects to suit specific needs. Interacting with the stand underneath the floating model teleports user to empty room with specific model for closer perspective and more interactivity (rotate model in 3D).
 
 Controls:<br><br>
 ![alt text](https://raw.githubusercontent.com/bday336/Knot-Showcase-VR/main/Controls%20Manual.png)
