@@ -2,6 +2,8 @@
 
 This will be made into a final build, but the source code is here.
 
+![alt text](https://raw.githubusercontent.com/bday336/Knot-Showcase-VR/main/gallery_image.png)
+
 ___________________________________
 Make local version in Unity
 ___________________________________
