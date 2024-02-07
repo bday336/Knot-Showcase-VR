@@ -13,6 +13,7 @@ public class KnotRotateScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localEulerAngles = transform.localEulerAngles + new Vector3(5f, 0f, 5f) * Time.deltaTime;
+        //transform.localEulerAngles = transform.localEulerAngles + new Vector3(5f, 5f, 5f) * Time.deltaTime;
+        //transform.Rotate(.25f,.25f,0f,Space.World);
     }
 }

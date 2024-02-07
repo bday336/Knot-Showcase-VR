@@ -66,6 +66,14 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/rotateKnotActive",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/rotateKnotLR",
+      "type": "vector2"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },

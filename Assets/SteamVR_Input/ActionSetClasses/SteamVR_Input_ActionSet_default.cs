@@ -137,6 +137,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean rotateKnotActive
+        {
+            get
+            {
+                return SteamVR_Actions.default_rotateKnotActive;
+            }
+        }
+        
+        public virtual SteamVR_Action_Vector2 rotateKnotLR
+        {
+            get
+            {
+                return SteamVR_Actions.default_rotateKnotLR;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

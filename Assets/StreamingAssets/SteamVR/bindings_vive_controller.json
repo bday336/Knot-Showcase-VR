@@ -225,7 +225,10 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/teleport"
+                     "output" : "/actions/default/in/rotateknotactive"
+                  },
+                  "position" : {
+                     "output" : "/actions/default/in/rotateknotlr"
                   }
                },
                "mode" : "trackpad",
@@ -281,6 +284,7 @@
    "category" : "steamvr_input",
    "controller_type" : "vive_controller",
    "description" : "",
+   "interaction_profile" : "",
    "name" : "vive_controller",
    "options" : {},
    "simulated_actions" : []

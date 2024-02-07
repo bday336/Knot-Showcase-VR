@@ -11,6 +11,10 @@ public class RightControllerScript : MonoBehaviour
     public SteamVR_Action_Boolean toggle;
     public SteamVR_Action_Boolean toggleFlow;
 
+    public SteamVR_Action_Boolean press;
+    public SteamVR_Action_Vector2 touchPosition;
+    public GameObject testKnot;
+
     // Object currently in hand to be placed in scene
     private GameObject objectInHand;
 
@@ -38,6 +42,7 @@ public class RightControllerScript : MonoBehaviour
         //objectInHand = placables[index];
         //model = Instantiate(objectInHand, transform.position + 0.2f * transform.forward, Quaternion.identity, gameObject.transform);
         //model.GetComponent<Collider>().enabled = false;
+        //Debug.Log("check");
 
     }
     void Update()
@@ -45,6 +50,14 @@ public class RightControllerScript : MonoBehaviour
         // Update the held object position with controller position
         placementPosition = transform.position + 0.2f * transform.forward;
         //model.transform.position = placementPosition;
+
+        if (press.GetState(handType))
+        {
+            //Debug.Log("pressed");
+            testKnot = GameObject.FindGameObjectWithTag("knot");
+            testKnot.transform.Rotate(touchPosition.GetAxis(handType).y,touchPosition.GetAxis(handType).x,0f,Space.World);
+
+        }
 
         // Trigger input to spawn currently selected placeable object
         if (grabAction.GetLastStateDown(handType))

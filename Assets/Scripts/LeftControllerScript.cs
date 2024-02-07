@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Valve.VR;
 
 
@@ -25,6 +26,8 @@ public class LeftControllerScript : MonoBehaviour
     public bool isTeleportActive = false;
     public float fadeTime = 0.5f;
 
+    Scene scene;
+
     void Update()
     {
 
@@ -35,15 +38,40 @@ public class LeftControllerScript : MonoBehaviour
         }
 
         // Trigger pull input to grab object in the scene
-        if (grabAction.GetLastStateDown(handType) && collidingObject)
+        if (grabAction.GetLastStateDown(handType) && collidingObject )
         {
-            if(collidingObject != RightControllerScript.model)
-            {
-                if (collidingObject.tag == "Test Particle")
+                if (collidingObject.tag == "ReturnCube")
                 {
-                    GrabObject();
+                    ChangeScene("SampleScene");
                 }
-            }
+                if (collidingObject.tag == "UnknotCube")
+                {
+                    ChangeScene("UnknotVoidScene");
+                }
+                if (collidingObject.tag == "TorusKnotCube")
+                {
+                    ChangeScene("TorusKnotVoidScene");
+                }
+                if (collidingObject.tag == "TrefoilKnotCube")
+                {
+                    ChangeScene("TrefoilKnotVoidScene");
+                }
+                if (collidingObject.tag == "Fig8KnotCube")
+                {
+                    ChangeScene("Fig8KnotVoidScene");
+                }
+                if (collidingObject.tag == "StevedoreKnotCube")
+                {
+                    ChangeScene("StevedoreKnotVoidScene");
+                }
+                if (collidingObject.tag == "SolomonSealKnotCube")
+                {
+                    ChangeScene("SolomonSealKnotVoidScene");
+                }
+                if (collidingObject.tag == "PretzelKnotCube")
+                {
+                    ChangeScene("PretzelKnotVoidScene");
+                }
             
         }
 
@@ -69,6 +97,7 @@ public class LeftControllerScript : MonoBehaviour
             // Teleport
             if (teleportAction.GetLastStateUp(handType))
             {
+                Debug.Log("teleport");
                 TryTeleport();
             }
         }
@@ -85,11 +114,7 @@ public class LeftControllerScript : MonoBehaviour
             return;
         }
         collidingObject = col.gameObject;
-        // Highlight outline of colliding object
-        if(col.tag == "Test Particle" && !objectInHand)
-        {
-            collidingObject.GetComponent<Outline>().enabled = true;
-        }
+
     }
 
 
@@ -106,11 +131,7 @@ public class LeftControllerScript : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        // Cancel outline highlighting
-        if (other.tag == "Test Particle")
-        {
-            other.GetComponent<Outline>().enabled = false;
-        }
+
         if (!collidingObject)
         {
             return;
@@ -231,6 +252,21 @@ public class LeftControllerScript : MonoBehaviour
 
         // If not a hit
         return false;
+    }
+
+    public void ChangeScene(string change2scene)
+    {
+        scene = SceneManager.GetActiveScene();
+        Debug.Log(scene.name);
+        if(scene.name == "SampleScene")
+        {
+            SceneManager.LoadScene(change2scene);
+        }
+        if(scene.name != "SampleScene")
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        
     }
 
 
