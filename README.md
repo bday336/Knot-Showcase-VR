@@ -15,9 +15,7 @@ ___________________________________
 Functionality / Controls
 ___________________________________
 
-Currently the field being visualized by the arrows and particle trails must be hardcoded into the FieldScript and TestParticleScript. Right now, the hopfion field is given by the vector field given in the supplementary information of the Nature Materials SI for https://www.nature.com/articles/nmat4826 (the m field)
-
-The default simulation scene have the vector field represented by a cube with side length of 2 units and arrow resolution of 20 per dimension. This gives a dense field of vector arrows, but its can be changed in the Unity inspector through the field object by adjusting the grid resolution value (you may have to pause the scene, change the value, then restart the scene)
+Currently the gallery consists of a variety of 3D models of some common mathematical knots. This is completely extendable such that more knots can be included. Alternatively, the knots can be exchanged for different objects to suit specific needs.
 
 Controls:<br><br>
 ![alt text](https://raw.githubusercontent.com/bday336/Knot-Showcase-VR/main/Controls%20Manual.png)
